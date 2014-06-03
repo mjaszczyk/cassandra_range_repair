@@ -31,6 +31,11 @@ Options:
   -H HOST, --host=HOST  Hostname to repair
   -s STEPS, --steps=STEPS
                         Number of discrete ranges
+  --nodetool=NODETOOL   Nodetool bin location
+  --repair-concurrency=REPAIRCONCURRENCY
+                        How many repairs can run in parallel. Default: 10
+  --all-dcs             Do not limit repair for local DC
+  -v, --verbose         Verbose mode
 ```
 
 ### Sample
@@ -56,3 +61,4 @@ DEBUG      2014-05-09 17:33:54,904    repair_keyspace                 182 : SUCC
 - Originally by [Matt Stump](https://github.com/mstump)
 - Converted to work with vnodes by [Brian Gallew](https://github.com/BrianGallew)
 - Additional functionality by [Eric Lubow](http://github.com/elubow)
+- Running repair steps in parallel and minor changes by [Michal Jaszczyk @Scandit](https://github.com/mjaszczyk)
